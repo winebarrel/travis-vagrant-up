@@ -5,9 +5,11 @@ install:
   - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
   - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
   - sudo apt-get update
+  - uname -r
   - sudo apt-get -y install linux-headers-generic
   - sudo apt-get -y install virtualbox-4.3
   - sudo dpkg-reconfigure virtualbox-4.3
+  - sudo modprobe vboxdrv
   - VBoxManage -v
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
   - sudo dpkg -i vagrant_1.7.2_x86_64.deb
