@@ -8,7 +8,7 @@ install:
   - wget http://ftp.openvz.org/debian/archive.key
   - sudo apt-key add archive.key
   - sudo apt-get update
-  - sudo apt-get -y install inux-headers-2.6.32-openvz-042stab090.5-amd64
+  - sudo apt-get -y install linux-headers-2.6.32-openvz-042stab090.5-amd64
   - sudo apt-get -y install virtualbox-4.3
   - sudo dpkg-reconfigure virtualbox-4.3
   - sudo modprobe vboxdrv
