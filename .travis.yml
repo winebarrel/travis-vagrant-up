@@ -4,7 +4,7 @@ rvm:
 install:
   - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
   - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-  - echo "deb http://download.openvz.org/debian wheezy main" > /etc/apt/sources.list.d/openvz-rhel6.list
+  - echo "deb http://download.openvz.org/debian wheezy main" | sudo tee /etc/apt/sources.list.d/openvz-rhel6.list
   - wget http://ftp.openvz.org/debian/archive.key
   - sudo apt-key add archive.key
   - sudo apt-get update
