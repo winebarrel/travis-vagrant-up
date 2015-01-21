@@ -10,7 +10,6 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install inux-headers-2.6.32-openvz-042stab094.7-amd64
   - sudo apt-get -y install virtualbox-4.3
-  - sudo dpkg-reconfigure virtualbox-dkms
   - sudo dpkg-reconfigure virtualbox
   - sudo modprobe vboxdrv
   - VBoxManage -v
