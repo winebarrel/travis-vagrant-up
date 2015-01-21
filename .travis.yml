@@ -8,10 +8,9 @@ install:
   - sudo apt-get -y install linux-headers-generic
   - sudo apt-get -y install virtualbox-4.2
   - VBoxManage -v
-  - wget http://files.vagrantup.com/packages/be0bc66efc0c5919e92d8b79e973d9911f2a511f/vagrant_1.0.5_i686.deb
-  - sudo dpkg -i vagrant_1.0.5_i686.deb
+  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_i686.deb
+  - sudo dpkg -i vagrant_1.7.2_i686.deb
 script:
-  - cat /opt/vagrant/bin/vagrant
   - /opt/vagrant/bin/vagrant up
   - ls
   - /opt/vagrant/bin/vagrant ssh --command "touch /vagrant/smash_it_with_a_hammer"
