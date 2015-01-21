@@ -10,8 +10,7 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-2.6.32-openvz-042stab090.5-amd64
   - sudo apt-get -y install virtualbox-4.3
-  - sudo dpkg-reconfigure virtualbox-4.3
-  - sudo modprobe vboxdrv
+  - sudo /etc/init.d/vboxdrv setup
   - VBoxManage -v
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
   - sudo dpkg -i vagrant_1.7.2_x86_64.deb
