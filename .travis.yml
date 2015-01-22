@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - 2.0.0
 install:
+  - sudo /etc/init.d/postgresql stop
   - sudo apt-get update -q -y
   - sudo apt-get -q -y -f -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold" upgrade
   - sudo apt-get -y install virtualbox --fix-missing # Everything falls apart here exactly.
