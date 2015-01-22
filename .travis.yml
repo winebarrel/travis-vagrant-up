@@ -3,7 +3,7 @@ rvm:
   - 2.0.0
 install:
   - sudo apt-get update -q -y
-  - sudo apt-get -q -y -f -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold" dist-upgrade
+  - sudo apt-get -q -y -f -o "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold" upgrade
   - sudo apt-get -y install virtualbox --fix-missing # Everything falls apart here exactly.
   - sudo wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
   - sudo dpkg -i vagrant_1.7.2_x86_64.deb
